@@ -11,4 +11,19 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'simbleCalculator';
+
+  result:string = '';
+  getValue(value:any)
+  {
+    this.result += value;
+    console.log(this.result);
+  }
+  reset()
+  {
+    this.result = '';
+  }
+  getResult()
+  {
+    this.result  = eval(this.result);
+  }
 }
